@@ -22,9 +22,9 @@ pub fn jacobi_iteration(
                 }
             }
 
-            // if a[i][i].abs() < 1e-10 {
-            //     return Err(format!("Elemento diagonal a[{}][{}] é zero.", i, i));
-            // }
+            if a[i][i].abs() < 1e-10 {
+                return Err(format!("Elemento diagonal a[{}][{}] é zero.", i, i));
+            }
 
             x_new[i] = (b[i] - sum) / a[i][i];
         }
