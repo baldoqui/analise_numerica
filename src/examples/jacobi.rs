@@ -1,5 +1,5 @@
 use crate::iterative_methods::jacobi::jacobi_iteration;
-use log::{info, error};
+use log::{error, info};
 
 pub fn jacobi_example() {
     let a = vec![

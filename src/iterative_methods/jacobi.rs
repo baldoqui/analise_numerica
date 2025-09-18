@@ -1,4 +1,4 @@
-use log::{trace};
+use log::trace;
 
 pub fn jacobi_iteration(
     a: &Vec<Vec<f64>>,
@@ -13,7 +13,7 @@ pub fn jacobi_iteration(
 
     for k in 0..max_iter {
         trace!("Iteração {}: x = {:?}", k + 1, x);
-        
+
         for i in 0..n {
             let mut sum = 0.0;
             for j in 0..n {
@@ -35,15 +35,16 @@ pub fn jacobi_iteration(
         }
 
         if norm < tol {
-            trace!("Convergência alcançada na iteração {}. x = {:?} \n", k + 1, x_new);
+            trace!(
+                "Convergência alcançada na iteração {}. x = {:?} \n",
+                k + 1,
+                x_new
+            );
             return Ok(x_new);
         }
 
         x = x_new.clone();
     }
 
-    Err(format!(
-        "O método não convergiu em {} iterações.",
-        max_iter
-    ))
+    Err(format!("O método não convergiu em {} iterações.", max_iter))
 }
