@@ -1,3 +1,5 @@
+use log::{trace};
+
 pub fn jacobi_iteration(
     a: &Vec<Vec<f64>>,
     b: &Vec<f64>,
@@ -10,7 +12,8 @@ pub fn jacobi_iteration(
     let mut x_new = vec![0.0; n];
 
     for k in 0..max_iter {
-        println!("Iteração {}: ", k + 1);
+        trace!("Iteração {}: x = {:?}", k + 1, x);
+        
         for i in 0..n {
             let mut sum = 0.0;
             for j in 0..n {
@@ -32,6 +35,7 @@ pub fn jacobi_iteration(
         }
 
         if norm < tol {
+            trace!("Convergência alcançada na iteração {}. x = {:?} \n", k + 1, x_new);
             return Ok(x_new);
         }
 

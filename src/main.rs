@@ -32,20 +32,20 @@ fn main() {
     let tol: f64 = 1e-5;
     let max_iter: usize = 100;
 
-    println!("Resolvendo o sistema Ax=b com a Iteração de Jacobi");
-    println!("Matrix A: {:?}", a);
-    println!("Vetor b: {:?}", b);
-    println!("Tolerância: {}, Máx. Iterações: {}\n", tol, max_iter);
+    info!("Resolvendo o sistema Ax=b com a método de Jacobi");
+    info!("Matrix A: {:?}", a);
+    info!("Vetor b: {:?}", b);
+    info!("Tolerância: {}, Máx. Iterações: {}\n", tol, max_iter);
 
     match jacobi_iteration(&a, &b, &x0, tol, max_iter) {
         Ok(solution) => {
-            println!("Solução convergiu:");
+            info!("Solução convergiu:");
             for (i, val) in solution.iter().enumerate() {
-                println!("  x[{}] = {:.6}", i, val);
+                info!("  x[{}] = {:.6}", i, val);
             }
         }
         Err(e) => {
-            eprintln!("\nErro: {}", e);
+            error!("Erro: {}", e);
         }
     }
 }
