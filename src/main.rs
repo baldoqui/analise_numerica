@@ -1,11 +1,11 @@
-mod iterative_methods;
 mod cli;
 mod examples;
+mod iterative_methods;
 
-use env_logger;
-use log::{LevelFilter};
-use std::str::FromStr;
 use clap::Parser;
+use env_logger;
+use log::LevelFilter;
+use std::str::FromStr;
 
 use cli::Args;
 use examples::jacobi;
