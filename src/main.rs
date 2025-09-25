@@ -7,8 +7,8 @@ use env_logger;
 use log::LevelFilter;
 use std::str::FromStr;
 
-use cli::Args;
-use examples::jacobi;
+use cli::{Args, Commands};
+use examples::{binary_search, jacobi};
 
 fn main() {
     let args = Args::parse();
@@ -20,5 +20,8 @@ fn main() {
         .format_target(false)
         .init();
 
-    jacobi::jacobi_example();
+    match args.command {
+        Commands::Jacobi => jacobi::run(),
+        Commands::BinarySearch => binary_search::run(),
+    }
 }

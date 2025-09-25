@@ -1,7 +1,7 @@
 use crate::iterative_methods::jacobi::jacobi_iteration;
 use log::{error, info};
 
-pub fn jacobi_example() {
+pub fn run() {
     let a = vec![
         vec![10.0, -1.0, 2.0, 0.0],
         vec![-1.0, 11.0, -1.0, 3.0],
