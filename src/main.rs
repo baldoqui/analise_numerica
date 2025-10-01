@@ -8,7 +8,7 @@ use log::LevelFilter;
 use std::str::FromStr;
 
 use cli::{Args, Commands};
-use examples::{binary_search, jacobi};
+use examples::{binary_search, jacobi, newton};
 
 fn main() {
     let args = Args::parse();
@@ -23,5 +23,6 @@ fn main() {
     match args.command {
         Commands::Jacobi => jacobi::run(),
         Commands::BinarySearch => binary_search::run(),
+        Commands::Newton => newton::run(),
     }
 }
