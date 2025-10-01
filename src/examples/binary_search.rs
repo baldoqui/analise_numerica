@@ -1,4 +1,3 @@
-
 use crate::iterative_methods::binary_search::binary_search;
 
 pub fn run() {

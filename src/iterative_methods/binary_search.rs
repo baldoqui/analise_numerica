@@ -1,4 +1,10 @@
-pub fn binary_search<F>(f: F, mut a: f64, mut b: f64, tol: f64, max_iter: usize) -> Result<f64, String>
+pub fn binary_search<F>(
+    f: F,
+    mut a: f64,
+    mut b: f64,
+    tol: f64,
+    max_iter: usize,
+) -> Result<f64, String>
 where
     F: Fn(f64) -> f64,
 {
