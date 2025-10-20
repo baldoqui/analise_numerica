@@ -15,4 +15,5 @@ pub enum Commands {
     Jacobi,
     BinarySearch,
     Newton,
+    MonteCarlo,
 }
