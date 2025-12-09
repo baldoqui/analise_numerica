@@ -4,3 +4,5 @@ pub mod newton;
 pub mod monte_carlo_pi;
 pub mod trapezoid;
 pub mod simpson;
+pub mod euler;
+pub mod lagrange;
