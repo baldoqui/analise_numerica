@@ -16,4 +16,9 @@ pub enum Commands {
     BinarySearch,
     Newton,
     MonteCarlo,
+    Trapezoid,
+    Simpson {
+        #[arg(long)]
+        function: String,
+    },
 }
