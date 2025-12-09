@@ -21,4 +21,6 @@ pub enum Commands {
         #[arg(long)]
         function: String,
     },
+    Euler,
+    Lagrange,
 }

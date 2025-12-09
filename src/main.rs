@@ -8,7 +8,7 @@ use log::LevelFilter;
 use std::str::FromStr;
 
 use cli::{Args, Commands};
-use examples::{binary_search, jacobi, newton, monte_carlo_pi, trapezoid, simpson};
+use examples::{binary_search, jacobi, newton, monte_carlo_pi, trapezoid, simpson, euler, lagrange};
 
 fn main() {
     let args = Args::parse();
@@ -27,5 +27,7 @@ fn main() {
         Commands::MonteCarlo => monte_carlo_pi::run(),
         Commands::Trapezoid => trapezoid::run(),
         Commands::Simpson { function } => simpson::run(function),
+        Commands::Euler => euler::run(),
+        Commands::Lagrange => lagrange::run(),
     }
 }
