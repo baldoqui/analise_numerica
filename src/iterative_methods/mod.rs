@@ -6,3 +6,4 @@ pub mod trapezoid;
 pub mod simpson;
 pub mod euler;
 pub mod lagrange;
+pub mod taylor;

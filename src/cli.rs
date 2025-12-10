@@ -11,6 +11,7 @@ pub struct Args {
 }
 
 #[derive(Subcommand, Debug)]
+#[command(rename_all = "kebab-case")]
 pub enum Commands {
     Jacobi,
     BinarySearch,
@@ -23,4 +24,6 @@ pub enum Commands {
     },
     Euler,
     Lagrange,
+    Taylor,
+    TaylorOrder4,
 }
